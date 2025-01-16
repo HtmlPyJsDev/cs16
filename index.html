@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 1.6 Server - Ultimate Gaming Experience</title>
+    <style>
+        @keyframes neonPulse {
+            0%, 100% { text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+            50% { text-shadow: 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de; }
+        }
+        @keyframes backgroundScroll {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-image: 
+                linear-gradient(45deg, #000 25%, transparent 25%),
+                linear-gradient(-45deg, #000 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #000 75%),
+                linear-gradient(-45deg, transparent 75%, #000 75%);
+            background-size: 20px 20px;
+            animation: backgroundScroll 20s linear infinite;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff00de;
+            text-shadow: 0 0 10px #ff00de;
+        }
+        section {
+            margin: 80px 20px 20px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 20px #00ff00;
+            animation: fadeInUp 1s ease-out;
+        }
+        h1, h2 {
+            color: #00ff00;
+            text-align: center;
+            animation: neonPulse 1.5s infinite;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff00de;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px #fff;
+        }
+        .button:hover {
+            background-color: #00ff00;
+            box-shadow: 0 0 20px #00ff00;
+            transform: scale(1.1);
+        }
+        .server-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(0, 255, 0, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+        }
+        .donators-list, .shop-items {
+            list-style-type: none;
+            padding: 0;
+        }
+        .donators-list li, .shop-items li {
+            background-color: rgba(255, 0, 222, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .donators-list li:hover, .shop-items li:hover {
+            background-color: rgba(255, 0, 222, 0.3);
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#monitor">Server Monitor</a>
+            <a href="#admin">Admin Panel</a>
+            <a href="#groups">Groups</a>
+            <a href="#donators">Top Donators</a>
+            <a href="#shop">Donation Shop</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>CS 1.6 Ultimate Server</h1>
+        <p>Experience the classic FPS in a whole new dimension!</p>
+        <a href="#monitor" class="button">Join the Action Now!</a>
+    </section>
+
+    <section id="monitor">
+        <h2>Server Monitor</h2>
+        <div class="server-stats">
+            <div class="stat-item">
+                <h3>Status</h3>
+                <p>Online</p>
+            </div>
+            <div class="stat-item">
+                <h3>Players</h3>
+                <p>16/32</p>
+            </div>
+            <div class="stat-item">
+                <h3>Current Map</h3>
+                <p>de_dust2</p>
+            </div>
+            <div class="stat-item">
+                <h3>IP Address</h3>
+                <p>95.181.158.132:27040</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="admin">
+        <h2>Admin Panel</h2>
+        <p>Access the admin panel to manage server settings and players.</p>
+        <a href="#" class="button">Login to Admin Panel</a>
+    </section>
+
+    <section id="groups">
+        <h2>Create Groups</h2>
+        <p>Create and manage custom groups for your server.</p>
+        <a href="#" class="button">Manage Groups</a>
+    </section>
+
+    <section id="donators">
+        <h2>Top Donators</h2>
+        <ol class="donators-list">
+            <li>Player1 - $100</li>
+            <li>Player2 - $75</li>
+            <li>Player3 - $50</li>
+            <li>Player4 - $25</li>
+            <li>Player5 - $10</li>
+        </ol>
+    </section>
+
+    <section id="shop">
+        <h2>Donation Shop</h2>
+        <ul class="shop-items">
+            <li>VIP Status - $10</li>
+            <li>Custom Skin - $5</li>
+            <li>Special Weapon - $15</li>
+            <li>Map Vote Power - $8</li>
+        </ul>
+        <a href="#" class="button">Purchase Items</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 CS 1.6 Ultimate Server. All rights reserved.</p>
+    </footer>
+</body>
+</html>
